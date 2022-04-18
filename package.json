@@ -1,11 +1,13 @@
 {
   "name": "video-background",
   "version": "0.1.0",
-  "homepage": "https://reactgular.github.io/video-background/",
+  "homepage": "http://architarora.github.io/nftapp",
   "private": true,
   "scripts": {
     "start": "cross-env TAILWIND_MODE=watch craco start",
-    "build": "cross-env BUILD_PATH=docs craco build"
+    "build": "cross-env BUILD_PATH=docs craco build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [
@@ -32,6 +34,7 @@
     "@types/react-dom": "^17.0.0",
     "autoprefixer": "^9",
     "cross-env": "^7.0.3",
+    "gh-pages": "^3.2.3",
     "postcss": "^7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
